@@ -191,9 +191,16 @@ galeria {
   gap: 10px;            /* espaço entre as fotos */
   justify-content: center; /* centraliza tudo */
 }
+.galeria {
+  display: flex;
+  flex-wrap: wrap;      /* permite quebrar pra próxima linha */
+  justify-content: center;
+  gap: 15px;            /* espaçamento entre as imagens */
+}
 
 .galeria img {
-  width: 200px;         /* tamanho da imagem */
-  height: auto;         /* mantém proporção */
-  border-radius: 8px;   /* cantinhos arredondados */
+  width: 30%;           /* 3 imagens por linha */
+  aspect-ratio: 1 / 1;  /* deixa em formato quadrado */
+  object-fit: cover;    /* preenche sem distorcer */
+  border-radius: 8px;   /* opcional */
 }
