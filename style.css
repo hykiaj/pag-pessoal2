@@ -185,13 +185,7 @@ body {
         display: flex;
         margin-top: 15px;
     }
-}
-galeria {
-  display: flex;        /* coloca lado a lado */
-  gap: 10px;            /* espaço entre as fotos */
-  justify-content: center; /* centraliza tudo */
-}
-.galeria {
+    .galeria {
   display: flex;
   flex-wrap: wrap;      /* permite quebrar pra próxima linha */
   justify-content: center;
