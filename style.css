@@ -185,16 +185,3 @@ body {
         display: flex;
         margin-top: 15px;
     }
-    .galeria {
-  display: flex;
-  flex-wrap: wrap;      /* permite quebrar pra próxima linha */
-  justify-content: center;
-  gap: 15px;            /* espaçamento entre as imagens */
-}
-
-.galeria img {
-  width: 30%;           /* 3 imagens por linha */
-  aspect-ratio: 1 / 1;  /* deixa em formato quadrado */
-  object-fit: cover;    /* preenche sem distorcer */
-  border-radius: 8px;   /* opcional */
-}
