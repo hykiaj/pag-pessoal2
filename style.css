@@ -186,7 +186,7 @@ body {
         display: flex;
         margin-top: 15px;
     }
-}.galeria-fotos {
+}.image-container{
     /* 1. Ativa o Flexbox para organizar os itens */
     display: flex;
 
@@ -209,7 +209,7 @@ body {
 /* ---------------------------------------------------- */
 /* CSS OPCIONAL PARA AS IMAGENS FILHAS */
 /* ---------------------------------------------------- */
-.galeria-fotos img {
+.image-container {
     /* Define uma largura máxima para as imagens (elas não passarão de 200px) */
     max-width: 200px; 
     /* Garante que a imagem se ajuste ao contêiner mantendo a proporção */
