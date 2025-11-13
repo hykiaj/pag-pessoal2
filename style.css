@@ -201,21 +201,9 @@ body {
 h1 {
   margin-bottom: 30px;
 }
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;          /* permite quebrar pra segunda linha */
-  justify-content: center;  /* centraliza as imagens */
-  gap: 15px;                /* espaçamento entre elas */
-}
-
-.galeria img {
-  width: 30%;               /* 3 por linha */
-  aspect-ratio: 1 / 1;      /* formato quadrado */
-  object-fit: cover;        /* preenche sem distorcer */
-  border-radius: 10px;      /* cantinhos arredondados */
-  transition: transform 0.3s;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);   /* leve aumento ao passar o mouse */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centraliza as fotos horizontalmente */
+    flex-wrap: wrap; /* Permite que as fotos quebrem a linha */
+    gap: 15px; /* Espaçamento entre as fotos */
+}l
