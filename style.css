@@ -94,7 +94,6 @@ body {
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
 .image-container img {
     width: 100%;
@@ -186,4 +185,15 @@ body {
         display: flex;
         margin-top: 15px;
     }
+}
+galeria {
+  display: flex;        /* coloca lado a lado */
+  gap: 10px;            /* espaço entre as fotos */
+  justify-content: center; /* centraliza tudo */
+}
+
+.galeria img {
+  width: 200px;         /* tamanho da imagem */
+  height: auto;         /* mantém proporção */
+  border-radius: 8px;   /* cantinhos arredondados */
 }
