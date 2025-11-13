@@ -186,4 +186,36 @@ body {
         display: flex;
         margin-top: 15px;
     }
+}.galeria-fotos {
+    /* 1. Ativa o Flexbox para organizar os itens */
+    display: flex;
+
+    /* 2. Alinha os itens na horizontal (Eixo Principal)
+          - 'center': centraliza horizontalmente
+          - 'space-between': distribui o espaço uniformemente entre os itens */
+    justify-content: center;
+
+    /* 3. Alinha os itens na vertical (Eixo Transversal)
+          - 'center': centraliza verticalmente (útil se as fotos tiverem alturas diferentes) */
+    align-items: center;
+
+    /* 4. Permite que as fotos quebrem a linha se não couberem na largura da tela */
+    flex-wrap: wrap;
+
+    /* 5. (Opcional) Adiciona um espaçamento uniforme entre as fotos */
+    gap: 15px; /* Ajuste o valor conforme sua preferência */
+}
+
+/* ---------------------------------------------------- */
+/* CSS OPCIONAL PARA AS IMAGENS FILHAS */
+/* ---------------------------------------------------- */
+.galeria-fotos img {
+    /* Define uma largura máxima para as imagens (elas não passarão de 200px) */
+    max-width: 200px; 
+    /* Garante que a imagem se ajuste ao contêiner mantendo a proporção */
+    height: auto; 
+    /* Deixa a foto com cantos arredondados (opcional) */
+    border-radius: 8px; 
+    /* Adiciona uma sombra suave (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
