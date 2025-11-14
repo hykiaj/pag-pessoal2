@@ -1,3 +1,6 @@
+let activeTab = "profile-card"
+let slideIndex = 1;
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Animação de Carregamento Inicial (Fade In)
     const profileCard = document.getElementById('profile-card');
@@ -40,10 +43,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Usamos um pequeno timeout para garantir a rolagem suave antes de mostrar
                 setTimeout(() => {
                     if (targetSection.classList.contains('content-section')) {
+                        activeTab=targetSection.id
                         targetSection.classList.add('visible');
+                        slideIndex = 1
+                        showSlides(slideIndex)
                     }
                 }, 500); // 500ms é meio segundo, dando tempo para a rolagem iniciar
             }
         });
     });
 });
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let actualSlides = document.getElementsByClassName("mySlides-"+activeTab);
+  let dots = document.getElementsByClassName("dot");
+  let actualDots = document.getElementsByClassName("dot-"+activeTab);
+  if (n > actualSlides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = actualSlides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  actualSlides[slideIndex-1].style.display = "block";  
+  actualDots[slideIndex-1].className += " active";
+}
